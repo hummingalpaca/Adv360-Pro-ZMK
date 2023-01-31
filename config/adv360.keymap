@@ -23,7 +23,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "TAPDANCE";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <175>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -36,9 +36,9 @@
         layer_0 {
             bindings = <
             &kp EQUAL     &kp N1  &kp N2    &kp N3     &kp N4  &kp N5  &tog 1                                                                                        &mo 5  &kp N6    &kp N7     &kp N8    &kp N9    &kp N0  &kp MINUS
-              &kp TAB      &kp Q   &kp W     &kp E      &kp R   &kp T   &none                                                                                        &none   &kp Y     &kp U      &kp I     &kp O     &kp P   &kp BSLH
+              &kp TAB      &kp Q   &kp W     &kp E      &kp R   &kp T   &none                                                                                        &none   &kp Y     &kp U      &kp I     &td MINUS O     &kp P   &kp BSLH
  &mt LCTRL ESC      &kp A   &kp S     &hm LALT D      &hm LGUI F   &kp G  &tog 4    &mt LGUI SPACE  &kp LALT                  &kp RG(GRAVE)            &key_repeat      &none   &kp H     &hm RGUI J      &hm RALT K     &kp L  &kp SEMI    &kp SQT
-            &kp LSHFT      &kp Z   &kp X     &kp C      &kp V   &kp B   &none             &none  &kp HOME   &none   &none      &kp RG(V)                  &none      &none   &kp N     &kp M  &kp COMMA   &td EXCL DOT  &kp FSLH  &kp RSHFT
+            &kp LSHFT      &kp Z   &kp X     &kp C      &kp V   &kp B   &none             &none  &kp HOME   &none   &none      &kp RG(V)                  &none      &none   &kp N     &kp M  &td UNDER COMMA   &td EXCL DOT  &kp FSLH  &kp RSHFT
                 &mo 2  &kp GRAVE  &trans  &kp LEFT  &kp RIGHT   &kp SPACE  &kp LSHFT   &kp LALT                      &kp RG(C)  &mt RCTRL ENTER  &to 1        &kp DOWN     &kp UP  &kp LBKT  &kp RBKT      &mo 2
             >;
         };
@@ -46,30 +46,30 @@
         left_layer {
             bindings = <
  &trans        &trans        &trans        &trans        &trans        &trans  &trans                                                        &trans        &trans        &trans        &trans        &trans        &trans         &trans
- &trans        &kp ESC       &kp AT        &kp HASH      &kp DLLR      &trans  &trans                                                        &trans        &kp CARET     &kp AMPS      &kp STAR      &kp SEMI      &trans         &trans
- &trans        &kp TAB       &kp EQUAL     &trans        &trans        &kp SQT    &trans        &trans  &trans                  &trans  &trans  &trans        &kp BSLH      &kp LBRC      &kp RBRC      &kp PIPE      &kp ENTER      &kp BKSP
- &trans        &kp TILDE     &trans        &trans        &trans        &kp DQT    &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans        &trans        &trans        &trans        &to 3          &trans
- &trans        &trans        &trans        &trans        &trans        &to 0  &kp LGUI  &trans                  &trans  &trans  &to 2                      &trans        &trans        &trans        &trans         &trans
+ &trans        &kp ESC       &kp AT        &kp HASH      &kp DLLR      &kp PRCNT &trans                                                        &trans        &kp CARET     &kp AMPS      &kp STAR      &td COLON SEMI     &kp BKSP         &trans
+ &trans        &kp TAB       &kp EQUAL     &trans        &kp SQT       &trans      &trans        &trans  &trans                  &trans  &trans  &trans        &td HOME BSLH      &kp LBRC      &kp RBRC      &td END PIPE      &kp ENTER      &kp BKSP
+ &trans        &kp TILDE     &trans        &trans        &kp DQT       &trans      &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans        &kp LBKT      &kp LPAR      &kp RPAR      &kp RBKT      &to 3          &trans
+ &trans        &trans        &trans        &trans        &trans        &to 0  &trans &trans                  &trans  &kp RCTL  &to 2                      &trans        &trans        &trans        &trans         &trans
             >;
         };
 
         right_layer {
             bindings = <
  &trans        &trans        &trans        &trans        &trans        &trans  &trans                                                        &trans        &trans        &trans        &trans        &trans        &trans         &trans
- &trans  			 &trans  			 &trans 			 &trans  			 &trans  			 &trans  &trans                                                        &trans        &trans        &kp N7  &kp N8  &kp N9  &trans         &trans
- &trans        &trans        &trans        &trans        &trans        &trans  &trans        &trans  &trans                  &trans  &trans  &trans      	 &trans      	 &kp N4  &kp N5  &kp N6  &kp ENTER      &kp BKSP
- &trans        &trans        &trans        &trans        &trans        &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans        &kp N0  &kp N1  &kp N2  &kp N3  &to 3   			&trans
- &trans        &trans        &trans        &trans        &trans        &to 0   &trans       &trans                  &trans  &trans  &to 1                             &trans        &kp N0                   &trans         &trans
+ &trans  			 &kp ESC  		 &trans 			 &trans  			 &trans  			 &kp UNDER  &trans                                                        &trans        &kp MINUS        &kp N7  &kp N8  &kp N9  &kp BKSP         &trans
+ &trans        &kp TAB       &trans        &trans        &trans        &kp PLUS  &trans        &trans  &trans                  &trans  &trans  &trans      	 &kp EQUAL      	 &kp N4  &kp N5  &kp N6  &kp ENTER      &kp BKSP
+ &trans        &trans        &trans        &trans        &trans        &kp DOT  &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans        &kp N0  &kp N1  &kp N2  &kp N3  &to 3   			&trans
+ &trans        &trans        &trans        &trans        &trans        &to 0   &kp LGUI       &trans                  &trans  &trans  &to 1                             &trans        &kp N0                   &trans         &trans
             >;
         };
 
         tri_layer {
             bindings = <
  &trans        &trans        &trans        &trans        &trans        &trans  &trans                                                        &trans        &trans        &trans        &trans        &trans        &trans         &trans
- &trans        &trans        &trans        &trans        &trans        &trans  &trans                                                        &trans        &trans        &trans        &trans        &trans        &trans         &trans
- &trans        &trans        &trans        &trans        &trans        &trans  &trans        &trans  &trans                  &trans  &trans  &trans      &kp LEFT      &kp DOWN        &kp UP     &kp RIGHT     &kp ENTER  &kp BKSP
- &td LG(TAB) TAB       &trans        &trans        &trans        &trans        &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans        &trans        &trans        &trans        &to 2 &trans
- &td LG(GRAVE) GRAVE        &trans        &trans        &trans        &trans        &to 0   &trans        &trans                  &trans  &kp RALT  &trans                      &trans        &trans        &trans        &trans         &trans
+ &trans        &td LG(LA(ESC)) ESC         &trans        &trans        &trans        &trans  &trans                                                        &trans        &trans        &trans        &trans        &trans        &kp BKSP         &trans
+ &trans        &td LG(TAB) TAB        &trans        &trans        &trans        &trans  &trans        &trans  &trans                  &trans  &trans  &trans      &kp LEFT      &hm RGUI DOWN        &kp UP     &kp RIGHT     &kp ENTER  &kp BKSP
+ &trans        &td LG(GRAVE) GRAVE               &trans        &trans        &trans        &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans        &trans        &trans        &trans        &to 2 &trans
+ &trans        &trans                 &trans        &trans        &trans        &to 0   &kp LGUI        &trans                  &trans  &kp RALT  &trans                      &trans        &trans        &trans        &trans         &trans
             >;
         };
 
