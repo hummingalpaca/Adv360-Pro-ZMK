@@ -65,9 +65,9 @@
 
         tri_layer {
             bindings = <
- &trans        &trans        &trans        &trans        &trans        &trans  &trans                                                        &trans        &trans        &trans        &trans        &trans        &trans         &trans
- &trans        &td LG(LA(ESC)) ESC         &trans        &trans        &trans        &trans  &trans                                                        &trans        &trans        &trans        &trans        &trans        &kp BKSP         &trans
- &trans        &td LG(TAB) TAB        &trans        &trans        &trans        &trans  &trans        &trans  &trans                  &trans  &trans  &trans      &kp LEFT      &hm RGUI DOWN        &kp UP     &kp RIGHT     &kp ENTER  &kp BKSP
+              &trans        &trans        &trans        &trans        &trans        &trans  &trans                                                        &trans        &trans        &trans        &trans        &trans        &trans         &trans
+              &trans        &td LG(LA(ESC)) ESC         &kp F8        &kp F7        &kp F9        &td H Q  &trans                                                        &trans        &kp RG(LEFT)        &kp RC(RS(H))        &kp RC(RS(L))         &kp RG(RIGHT)        &kp BKSP         &trans
+ &trans        &td LG(TAB) TAB        &trans        &trans        &trans        &td LGUI DELETE    &trans      &trans   &trans     &trans   &trans    &trans    &kp LEFT      &hm RGUI DOWN        &kp UP     &kp RIGHT     &kp ENTER  &kp BKSP
  &trans        &td LG(GRAVE) GRAVE               &trans        &trans        &trans        &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans        &trans        &trans        &trans        &to 2 &trans
  &trans        &trans                 &trans        &trans        &trans        &to 0   &kp LGUI        &trans                  &trans  &kp RALT  &trans                      &trans        &trans        &trans        &trans         &trans
             >;
